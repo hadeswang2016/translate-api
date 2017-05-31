@@ -23,7 +23,7 @@ import (
 
 func Get_trans_content(translator int,word_list []string,db_conf map[string]string)(int64,error) {
     timestamp := time.Now().Unix()
-    db, err := sql.Open("mysql", db_conf["User"]+":"+db_conf["Password"]+"@tcp("+db_conf["Host"]+":"+db_conf["Port"]+")/"+db_conf["Dbname"]+"?charset=utf8") 
+    db, err := sql.Open("mysql_s", db_conf["User"]+":"+db_conf["Password"]+"@tcp("+db_conf["Host"]+":"+db_conf["Port"]+")/"+db_conf["Dbname"]+"?charset=utf8") 
     checkErr(err)  
     //插入数据  
     var table string
