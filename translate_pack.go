@@ -247,6 +247,7 @@ func google_translate(words string) string {
 
 func google_translate_batch(words_trunk string)string {
 	words_trunk = strings.Replace(words_trunk, "&", "＆", -1)
+    words_trunk = strings.Replace(words_trunk, ";", "；", -1)
 	tk := parse_js(words_trunk)
 	to_trans_words := url_en_code(words_trunk)
 	url := "http://192.168.1.81/Ad/Lmb/translate_for_go?tk="+tk+"&words="+to_trans_words
