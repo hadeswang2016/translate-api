@@ -1,0 +1,14 @@
+{
+    "youdao": {
+        "base_url": "http://openapi.youdao.com/api",
+        "key": "5ee079a739e1c466",
+        "scret": "O3ZmaVtRc1qlHaAQeLMinw6slKWHdyKc",
+        "translate_max_limit":"3000",
+        "translate_trunk":"25"
+    },
+    "google":{
+        "base_url":"https://translate.google.cn/translate_a/single?client=t&sl=en&tl=zh-CN&hl=zh-CN&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&ie=UTF-8&oe=UTF-8&source=btn&ssel=0&tsel=0&kc=0&",
+        "translate_max_limit":"5000",
+        "translate_trunk":"30"
+    }
+}
