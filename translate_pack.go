@@ -60,11 +60,11 @@ func youdao_tanslate(words string)(res string) {
 	app_key := "5ee079a739e1c466"
 	app_scret := "O3ZmaVtRc1qlHaAQeLMinw6slKWHdyKc"
 	words_str_len := len(words)
-	//文本超过4000 分段翻译
+	//文本超过3000 分段翻译
 	if words_str_len > 3000{
-		words_arr := strings.Split(words, ".")//按句子分割   每次翻译30个句子
-		words_len := len(words_arr)//35个句子
-		words_step := 25 //每次翻译30个句子
+		words_arr := strings.Split(words, ".")//按句子分割
+		words_len := len(words_arr)
+		words_step := 25 //每次翻译25个句子
 		words_loop_mod := words_len%words_step;
 		words_loop := words_len/words_step;
 		if words_loop_mod != 0{
@@ -218,9 +218,9 @@ func google_translate(words string) string {
 	words_str_len := len(words)
 	//文本超过4000 分段翻译
     if words_str_len > 5000{
-        words_arr := strings.Split(words, ".")//按句子分割   每次翻译30个句子
+        words_arr := strings.Split(words, ".")//按句子分割
         words_len := len(words_arr)
-        words_step := 30 //每次翻译30个句子
+        words_step := 20 //每次翻译20个句子
         words_loop_mod := words_len%words_step;
         words_loop := words_len/words_step;
         if words_loop_mod != 0{
