@@ -216,11 +216,11 @@ func parse_js(words string) string  {
 
 func google_translate(words string) string {
 	words_str_len := len(words)
-	//文本超过4000 分段翻译
+	//文本超过5000 分段翻译
     if words_str_len > 5000{
-        words_arr := strings.Split(words, ".")//按句子分割
+        words_arr := strings.Split(words, ".")//按句子分割   每次翻译30个句子
         words_len := len(words_arr)
-        words_step := 20 //每次翻译20个句子
+        words_step := 30 //每次翻译30个句子
         words_loop_mod := words_len%words_step;
         words_loop := words_len/words_step;
         if words_loop_mod != 0{
