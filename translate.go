@@ -131,6 +131,7 @@ func google_translate_trunk(words_trunk string) (string,error) {
     //replace special string
     words_trunk = strings.Replace(words_trunk, "&", "＆", -1)
     words_trunk = strings.Replace(words_trunk, ";", "；", -1)
+    words_trunk = strings.Replace(words_trunk, "+", "＋", -1)
     google_api_conf,err :=  read_conf("apiconf.json","google")
     if err !=nil {
         log.Panicf("get api conf fail : %s", err.Error())
