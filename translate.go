@@ -26,7 +26,7 @@ func Translate_google(words string)(string,error) {
 }
 //youdao api handle
 func youdao_tanslate(words string)(string,error) {
-    youdao_api_conf,err :=  read_conf("key.json","youdao")
+    youdao_api_conf,err :=  read_conf("apiconf.json","youdao")
     if err !=nil {
         log.Panicf("get api conf fail : %s", err.Error())
     } 
@@ -38,7 +38,7 @@ func youdao_tanslate(words string)(string,error) {
 }
 //google api handle
 func google_translate(words string) (string,error) {
-    google_api_conf,err :=  read_conf("key.json","google")
+    google_api_conf,err :=  read_conf("apiconf.json","google")
     if err !=nil {
         log.Panicf("get api conf fail : %s", err.Error())
     }
@@ -131,7 +131,7 @@ func google_translate_trunk(words_trunk string) (string,error) {
     //replace special string
     words_trunk = strings.Replace(words_trunk, "&", "＆", -1)
     words_trunk = strings.Replace(words_trunk, ";", "；", -1)
-    google_api_conf,err :=  read_conf("key.json","google")
+    google_api_conf,err :=  read_conf("apiconf.json","google")
     if err !=nil {
         log.Panicf("get api conf fail : %s", err.Error())
     }
