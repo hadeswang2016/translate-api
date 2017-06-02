@@ -17,6 +17,8 @@ import github.com/hadeswang2016/translate-api
 ```
 trans_title,_ := translate.Translate_google(title)
 
+trans_words,_ := translate.Translate_youdao(words)
+
 ```
 ### Documentation
 
