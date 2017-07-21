@@ -12,7 +12,7 @@ import (
     "encoding/hex"
     "net/url"
     "time"
-    "strconv"    
+    "strconv"      
 )
 //English is translated into Chinese with youdao api
 func Translate_youdao(words string)(string,error) {
